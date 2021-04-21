@@ -12,8 +12,8 @@ module.exports = {
   mode: 'development',
   entry: path.join(__dirname, "./src/js/index.js"),
   output: {
-    path: path.join(__dirname, './dist'),
-    filename: "bundle.js",
+    path: path.join(__dirname, 'dist'),
+    filename: "js/bundle.js", // 输出指定为js文件夹下的bundle.js
   },
   plugins: [
     new CleanWebpackPlugin(),
