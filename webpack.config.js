@@ -38,6 +38,14 @@ module.exports = {
             name: 'images/[name].[hash:8].[ext]'
           }
         }]
+      },
+      // 指定除html,css,png,jpg,js之外的资源用file-loader处理
+      {
+        exclude:/\.(html|css|png|jpg|js)/,
+        loader:'file-loader',
+        options:{
+          name:'[hash:10].[ext]'
+        }
       }
     ]
   },
