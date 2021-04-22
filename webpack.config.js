@@ -8,8 +8,10 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   filename: 'index.html',
   favicon: path.resolve('public/favicon.ico')
 })
+// optimize-css-assets-webpack-plugin  ---压缩css
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin') //  从js中提取css
-process.env.NODE_ENV = 'development' 
+// process.env.NODE_ENV = 'development' 
 module.exports = {
   mode: 'development',
   entry: path.join(__dirname, "./src/js/index.js"),
@@ -23,7 +25,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // 对输出的css文件指定存放路径以及命名
       filename: 'css/style.css'
-    })
+    }),
+    new OptimizeCssAssetsPlugin()
   ],
   module: {
     rules: [{

@@ -26,7 +26,8 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "html-withimg-loader": "^0.1.16"
+    "html-withimg-loader": "^0.1.16",
+    "optimize-css-assets-webpack-plugin": "^5.0.4"
   },
   "browserslist": {
     "development": [
